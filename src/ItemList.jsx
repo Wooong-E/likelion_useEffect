@@ -10,13 +10,14 @@ const ItemList = () => {
   const addItem = () => {
     const newItem = prompt('newItem을 입력하세요: ');
     if (newItem) {
+      // items.push(newItem) 금지!!!!!!! 객체가 안바뀜.
       setItems((prevItem) => [...prevItem, newItem]);
     }
   };
 
   return (
-    <div>
-      <h2>Items</h2>
+    <div className="flex flex-col mx-30 mt-20 p-20 bg-green-600 border rounded-[40px] text-center">
+      <h2 className="text-[60px] font-black">Items</h2>
       <ul>
         {items.map((item, index) => (
           <li key={index}>{item}</li>
