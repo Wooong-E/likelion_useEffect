@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useState } from 'react';
 
 const NameInput = () => {
@@ -6,9 +6,6 @@ const NameInput = () => {
 
   const handleChange = (e) => {
     setName(e.target.value);
-    console.log(e);
-    console.log(e.target);
-    console.log(e.target.value);
   };
 
   const containerStyle = 'max-w-md mx-auto mt-10 p-10 bg-stone-200 rounded-xl';
